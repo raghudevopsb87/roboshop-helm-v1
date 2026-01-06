@@ -1,0 +1,4 @@
+podName: frontend
+appPort: "80"
+serviceType: LoadBalancer
+

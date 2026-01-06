@@ -1,2 +1,5 @@
-podName: demo1
+projectName: roboshop
+appPort: "8080"
+serviceType: ClusterIP
+
 
