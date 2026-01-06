@@ -1,4 +1,4 @@
-all:
+install:
 	git pull
 	helm upgrade -i payment . -f dev-project-values/payment.yml
 	helm upgrade -i shipping . -f dev-project-values/shipping.yml
@@ -8,3 +8,11 @@ all:
 	helm upgrade -i frontend . -f dev-project-values/frontend.yml
 
 
+uninstall:
+	git pull
+	helm uninstall payment
+	helm uninstall shipping
+	helm uninstall cart
+	helm uninstall catalogue
+	helm uninstall user
+	helm uninstall frontend
