@@ -1,1 +1,5 @@
 appName: user
+configmapData:
+  MONGO     : "true"
+  REDIS_URL : "redis://redis-dev.rdevopsb87.online:6379"
+  MONGO_URL : "mongodb://mongodb-dev.rdevopsb87.online:27017/users"
