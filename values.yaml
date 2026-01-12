@@ -4,3 +4,5 @@ serviceType: ClusterIP
 replicas: 1
 
 
+job:
+  enabled: false
