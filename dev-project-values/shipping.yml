@@ -9,7 +9,7 @@ configmapData:
 
 job:
   enabled: true
-  jobs:
+  containers:
     - name: app-user
       file_name: db/app-user.sql
     - name: schema
