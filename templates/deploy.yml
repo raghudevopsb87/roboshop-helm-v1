@@ -18,7 +18,7 @@ spec:
         app: {{ .Values.appName }}
     spec:
       containers:
-{{ if .Values.appName == "frontend" }}
+{{ if eq .Values.appName "frontend" }}
       - args:
         - -nginx.scrape-uri=http://127.0.0.1/health
         image: nginx/nginx-prometheus-exporter:latest
