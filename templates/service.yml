@@ -10,6 +10,7 @@ spec:
   ports:
     - port: {{ .Values.appPort }}
       targetPort: {{ .Values.appPort }}
+      name: default
 {{ if eq .Values.appName "frontend" }}
     - port: 9113
       targetPort: 9113
