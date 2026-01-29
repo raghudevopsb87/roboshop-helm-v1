@@ -2,6 +2,7 @@ appName: shipping
 configmapData:
   CART_ENDPOINT : "cart:8080"
   DB_HOST       : "mysql-dev.rdevopsb87.online"
+  MYSQL_HOST    : "mysql-dev.rdevopsb87.online"
   DB_USER       : "root"
   DB_PASS       : "RoboShop@1"
   DB_TYPE       : "mysql"
