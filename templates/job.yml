@@ -7,16 +7,12 @@ spec:
   template:
     spec:
       containers:
-      {{- range .Values.job.containers }}
-      - name: {{ .name }}
-        image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
-        env:
-          - name: SCHEMA_FILE
-            value: {{ .file_name }}
+      - name: {{ .Values.appName }}-schema
+        image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/{{ .Values.appName }}-db-image
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
-            name: {{ $.Values.appName }}
-      {{- end }}
+            name: {{ .Values.appName }}
       restartPolicy: Never
   backoffLimit: 0
 {{ end }}
