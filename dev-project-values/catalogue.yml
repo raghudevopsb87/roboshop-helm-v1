@@ -12,3 +12,9 @@ job:
   containers:
     - name: master-data
       file_name: db/master-data.js
+
+resources:
+  requests_cpu: 100m
+  requests_mem: 128Mi
+  limits_cpu: 200m
+  limits_mem: 256Mi

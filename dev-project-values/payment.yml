@@ -8,3 +8,8 @@ configmapData:
   AMQP_USER : "roboshop"
   AMQP_PASS : "roboshop123"
 
+resources:
+  requests_cpu: 200m
+  requests_mem: 512Mi
+  limits_cpu: 400m
+  limits_mem: 1024Mi

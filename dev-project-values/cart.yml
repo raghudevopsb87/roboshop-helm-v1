@@ -3,3 +3,9 @@ configmapData:
   REDIS_HOST     : "redis-dev.rdevopsb87.online"
   CATALOGUE_HOST : "catalogue"
   CATALOGUE_PORT : "8080"
+
+resources:
+  requests_cpu: 100m
+  requests_mem: 128Mi
+  limits_cpu: 200m
+  limits_mem: 256Mi

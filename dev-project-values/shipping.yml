@@ -18,3 +18,9 @@ job:
     - name: master-data
       file_name: db/master-data.sql
 
+resources:
+  requests_cpu: 1500m
+  requests_mem: 2048Mi
+  limits_cpu: 3000m
+  limits_mem: 4096Mi
+
