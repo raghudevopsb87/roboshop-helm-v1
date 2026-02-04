@@ -42,6 +42,7 @@ spec:
             port: {{ .Values.appPort }}
           failureThreshold: 10
           periodSeconds: 10
+          initialDelaySeconds: 30
         resources:
           limits:
             cpu: {{ .Values.resources.limits_cpu | quote }}
