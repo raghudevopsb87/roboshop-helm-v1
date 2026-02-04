@@ -1,7 +1,7 @@
 projectName: roboshop
 appPort: "8080"
 serviceType: ClusterIP
-replicas: 1
+replicas: 2
 
 
 job:
