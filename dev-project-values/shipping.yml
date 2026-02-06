@@ -25,3 +25,4 @@ resources:
   limits_cpu: 3000m
   limits_mem: 4096Mi
 
+replicas: 5
