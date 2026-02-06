@@ -35,6 +35,10 @@ spec:
       - name: {{ .Values.appName }}
         image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/{{ .Values.appName }}:{{ .Values.appVersion }}
         imagePullPolicy: Always
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh", "-c", "sleep 30"]
         livenessProbe:
           httpGet:
             path: /health
