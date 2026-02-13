@@ -3,10 +3,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.appName }}
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-1:739561048503:certificate/0c63bd1e-2d0e-4a8d-a5f3-2cea7c6e39b4"
 spec:
   ingressClassName: nginx
   rules:
