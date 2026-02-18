@@ -26,23 +26,6 @@ spec:
           {{- range .Values.istio.principals }}
           - {{ . | quote }}
           {{- end }}
----
-apiVersion: security.istio.io/v1
-kind: AuthorizationPolicy
-metadata:
-  name: {{ .Values.appName }}-deny
-spec:
-  selector:
-    matchLabels:
-      app: {{ .Values.appName }}
-  action: DENY
-  rules:
-  - from:
-    - source:
-        notPrincipals:
-          {{- range .Values.istio.principals }}
-          - {{ . | quote }}
-          {{- end }}
 
 
 
