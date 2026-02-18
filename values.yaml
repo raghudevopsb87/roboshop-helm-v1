@@ -12,4 +12,5 @@ ingress:
 
 istio:
   mode: STRICT
+  principals: ["cluster.local/ns/example2/sa/debug"]
 

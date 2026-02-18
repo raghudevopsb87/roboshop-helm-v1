@@ -9,3 +9,16 @@ spec:
       app: {{ .Values.appName }}
   mtls:
     mode: {{ .Values.istio.mode }}
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: {{ .Values.appName }}
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: {{ .Values.istio.principals }}
+
+
