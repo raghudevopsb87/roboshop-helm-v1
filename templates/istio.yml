@@ -1,8 +1,11 @@
+---
 apiVersion: security.istio.io/v1
 kind: PeerAuthentication
 metadata:
   name: {{ .Values.appName }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
   mtls:
-    mode: PERMISSIVE
-
+    mode: {{ .Values.istio.mode }}

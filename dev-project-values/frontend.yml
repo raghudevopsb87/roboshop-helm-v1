@@ -14,8 +14,6 @@ configmapData:
   PAYMENT_PORT   : "8080"
 
 
-
-
 ingress:
   enabled: true
   host: frontend-dev.rdevopsb87.online
@@ -26,4 +24,7 @@ resources:
   requests_mem: 128Mi
   limits_cpu: 200m
   limits_mem: 256Mi
+
+istio:
+  mode: PERMISSIVE
 
