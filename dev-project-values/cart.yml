@@ -11,7 +11,10 @@ resources:
   limits_mem: 256Mi
 
 istio:
-  principals: ["cluster.local/ns/app/sa/frontend", "cluster.local/ns/app/sa/shipping", "cluster.local/ns/app/sa/payment"]
+  principals:
+    - cluster.local/ns/app/sa/frontend
+    - cluster.local/ns/app/sa/shipping
+    - cluster.local/ns/app/sa/payment
 
 
 
