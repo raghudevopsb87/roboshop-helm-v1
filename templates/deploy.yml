@@ -22,6 +22,7 @@ spec:
         project: {{ .Values.projectName }}
         app: {{ .Values.appName }}
     spec:
+      serviceAccountName: {{ .Values.appName }}
       containers:
 {{ if eq .Values.appName "frontend" }}
       - args:
