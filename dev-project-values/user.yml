@@ -9,3 +9,9 @@ resources:
   requests_mem: 128Mi
   limits_cpu: 200m
   limits_mem: 256Mi
+
+istio:
+  principals:
+    - cluster.local/ns/app/sa/frontend
+    - cluster.local/ns/app/sa/payment
+

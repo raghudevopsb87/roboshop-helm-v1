@@ -27,4 +27,7 @@ resources:
 
 istio:
   mode: PERMISSIVE
+  principals:
+    - cluster.local/ns/default/sa/nginx-ingress
+    - cluster.local/ns/app/sa/payment # Payment portal purpose.
 

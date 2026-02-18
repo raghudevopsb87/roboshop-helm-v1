@@ -26,3 +26,8 @@ resources:
   limits_mem: 4096Mi
 
 replicas: 5
+
+istio:
+  principals:
+    - cluster.local/ns/app/sa/frontend
+
