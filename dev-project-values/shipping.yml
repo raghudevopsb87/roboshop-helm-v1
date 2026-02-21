@@ -31,3 +31,6 @@ istio:
   principals:
     - cluster.local/ns/app/sa/frontend
 
+tmpMount:
+  enabled: true
+  tmpDir: /tmp
