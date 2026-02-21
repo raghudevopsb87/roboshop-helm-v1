@@ -28,6 +28,8 @@ spec:
         emptyDir: {}
 {{ end }}
       serviceAccountName: {{ .Values.appName }}
+      securityContext:
+        runAsUser: 1000
       containers:
 {{ if eq .Values.appName "frontend" }}
       - args:
