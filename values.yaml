@@ -14,3 +14,6 @@ istio:
   mode: STRICT
   principals: ["cluster.local/ns/example2/sa/debug", "cluster.local/ns/example2/sa/debug1"]
 
+tmpMount:
+  enabled: false
+

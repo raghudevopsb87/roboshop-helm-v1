@@ -31,3 +31,6 @@ istio:
     - cluster.local/ns/default/sa/nginx-ingress
     - cluster.local/ns/app/sa/payment # Payment portal purpose.
 
+tmpMount:
+  enabled: true
+  tmpDir: /var/cache/nginx
