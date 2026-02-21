@@ -24,7 +24,7 @@ spec:
     spec:
 {{ if .Values.tmpMount.enabled | default false }}
       volumes:
-      - name: tmpMount
+      - name: tmp-mount
         emptyDir: {}
 {{ end }}
       serviceAccountName: {{ .Values.appName }}
@@ -43,7 +43,7 @@ spec:
         imagePullPolicy: Always
 {{ if .Values.tmpMount.enabled | default false }}
         volumeMounts:
-        - name: tmpMount
+        - name: tmp-mount
           mountPath: {{ .Values.tmpMount.tmpDir }}
 {{ end }}
         securityContext:

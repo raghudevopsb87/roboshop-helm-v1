@@ -34,3 +34,4 @@ istio:
 tmpMount:
   enabled: true
   tmpDir: /var/cache/nginx
+
